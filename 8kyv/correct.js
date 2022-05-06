@@ -21,3 +21,16 @@ const correct = (string)=>{
   
 };
 console.log(correct("1U1APE5T55511"));
+
+
+// const corrections = {
+//   '5': 'S',
+//   '0': 'O',
+//   '1': 'I',
+// };
+
+// const correct = string => (
+//   string.replace(/[501]/g, character => corrections[character])
+// );
+
+// the best practice as if you have 10 or more you will have to use replace(like the above solution) way too many times. So far this is the best i found even though I didn't had this idea at the beginning
