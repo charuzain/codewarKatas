@@ -12,7 +12,8 @@
 // output = ["Open", "Open", "Senior", "Open", "Open", "Senior"]
 
 const openOrSenior = (data)=>{
-  return data.map(elem => elem[0] >= 55 && elem[1] > 7 ? "Senior" : "Open");
+  // return data.map(elem => elem[0] >= 55 && elem[1] > 7 ? "Senior" : "Open");
+  return data.map(([age,handicap])=> age >= 55 && handicap > 7 ? "Senior" : "Open");
 
 
 };
