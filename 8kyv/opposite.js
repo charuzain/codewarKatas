@@ -7,9 +7,9 @@
 // 14: -14
 // -34: 34
 
-const opposite = (number)=>{
-  return Math.sign(number) ? -number : number;
-};
+const opposite = number => -number;
+// return Math.sign(number) ? -number : number;
+
 
 console.log(opposite(-1));
 console.log(opposite(-131));
