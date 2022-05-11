@@ -9,12 +9,12 @@
 // [1, 1, 2] ==> 2
 // [17, 17, 3, 17, 17, 17, 17] ==> 3
 
-const stray = (numbers)=>{
-  for (let elem of numbers) {
-    if (numbers.indexOf(elem) === numbers.lastIndexOf(elem)) {
-      return elem;
-    }
-  }
-};
-
+// const stray = (numbers)=>{
+//   for (let elem of numbers) {
+//     if (numbers.indexOf(elem) === numbers.lastIndexOf(elem)) {
+//       return elem;
+//     }
+//   }
+// };
+const stray = (numbers)=> numbers.find(num=>numbers.indexOf(num) === numbers.lastIndexOf(num));
 console.log(stray([17, 17, 3, 17, 17, 17, 17]));
