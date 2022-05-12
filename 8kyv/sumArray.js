@@ -18,5 +18,7 @@
 //     .reduce((prev,curr)=>prev + curr,0);
 // };
 
-const sumArray = (arr)=> arr ? arr.sort((a,b)=>a - b).slice(1,-1).reduce((c,p)=> c + p,0) : 0;
-console.log(sumArray([1]));
+// const sumArray = (arr)=> arr ? arr.sort((a,b)=>a - b).slice(1,-1).reduce((c,p)=> c + p,0) : 0;
+
+const sumArray = (a)=> Array.isArray(a) && a.length > 1 ? a.reduce((c,p)=> c + p,0) - Math.min(...a) - Math.max(...a) : 0;
+console.log(sumArray([1, 2,6,4,3]));
