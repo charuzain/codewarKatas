@@ -11,10 +11,12 @@
 // Input validation
 // If an empty value ( null, None, Nothing etc. ) is given instead of an array, or the given array is an empty list or a list with only 1 element, return 0.
 
-const sumArray = (array)=>{
-  if (!array || array.length <= 2) return 0;
-  return array.sort((a,b)=> a - b)
-    .filter((e,i)=> i !== 0 && i !== array.length - 1)
-    .reduce((prev,curr)=>prev + curr,0);
-};
-console.log(sumArray([1,4,2,5,1,23,222]));
+// const sumArray = (array)=>{
+//   if (!array || array.length <= 2) return 0;
+//   return array.sort((a,b)=> a - b)
+//     .filter((e,i)=> i !== 0 && i !== array.length - 1)
+//     .reduce((prev,curr)=>prev + curr,0);
+// };
+
+const sumArray = (arr)=> arr ? arr.sort((a,b)=>a - b).slice(1,-1).reduce((c,p)=> c + p,0) : 0;
+console.log(sumArray([1]));
