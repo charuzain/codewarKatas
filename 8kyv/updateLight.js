@@ -4,14 +4,25 @@
 
 // For example, update_light('green') should return 'yellow'.
 
+// const updateLight = (current)=>{
+//   if (current === 'green') {
+//     return 'yellow';
+//   }
+//   if (current === 'yellow') {
+//     return 'red';
+//   }
+//   if (current === 'red') {
+//     return 'green';
+//   }
+// };
+
 const updateLight = (current)=>{
-  if (current === 'green') {
-    return 'yellow';
-  }
-  if (current === 'yellow') {
-    return 'red';
-  }
-  if (current === 'red') {
-    return 'green';
-  }
+  return  {green : 'yellow',
+    yellow:'red',
+    red : 'green',
+  }[current];
 };
+
+console.log(updateLight('green'));
+console.log(updateLight('red'));
+console.log(updateLight('yellow'))
