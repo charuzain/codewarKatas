@@ -12,9 +12,13 @@
 // Note: for this kata y isn't considered a vowel.
 
 
-const disemvowel = (str)=>{
-  const vowels = ["a","e","i","o","u"];
-  return str.split("").filter(e=> !vowels.includes(e.toLowerCase())).join("");
-};
+// const disemvowel = (str)=>{
+//   const vowels = ["a","e","i","o","u"];
+//   return str.split("").filter(e=> !vowels.includes(e.toLowerCase())).join("");
+// };
 // runtime 958ms
+
+
+const disemvowel = (str)=> str.replace(/[aeiou]/gi,"");
+
 console.log(disemvowel("What are you, a communist?"));
