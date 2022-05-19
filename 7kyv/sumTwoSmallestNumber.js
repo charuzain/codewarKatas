@@ -7,8 +7,15 @@
 // [10, 343445353, 3453445, 3453545353453] should return 3453455.
 
 
+// const sumTwoSmallestNumbers = (numbers)=>{
+//   return numbers.sort((a,b)=>a - b).slice(0,2).reduce((a,c)=>a + c,0);
+// };
+
+
 const sumTwoSmallestNumbers = (numbers)=>{
-  return numbers.sort((a,b)=>a - b).slice(0,2).reduce((a,c)=>a + c,0);
+  const [a,b] = numbers.sort((a,b)=> a - b);
+  return a + b;
 };
+
 
 console.log(sumTwoSmallestNumbers([5, 8, 12, 19, 22]));
